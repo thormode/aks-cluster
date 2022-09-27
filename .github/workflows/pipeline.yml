@@ -47,7 +47,7 @@ jobs:
 
       - name: Terraform Apply
         if:  github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform destroy -auto-approve
       # - name: Terraform Apply
       #   if:  github.ref == 'refs/heads/main' && github.event_name == 'push'
       #   run: terraform apply -auto-approve -lock-timeout=3000s -parallelism=1000 -no-color
